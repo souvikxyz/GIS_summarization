@@ -5,7 +5,7 @@ var map = L.map('map', {drawControl: true}).fitWorld();
 // var osmUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var osmUrl='tiles_kgp_nit/{z}/{x}/{y}.png';
 var osmAttrib='Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
-var osm = new L.TileLayer(osmUrl, {minZoom: 15, maxZoom: 18, attribution: osmAttrib});
+var osm = new L.TileLayer(osmUrl, {minZoom: 16, maxZoom: 120, attribution: osmAttrib});
 
 // start the map in NIT Dgp
 map.addLayer(osm);
@@ -72,6 +72,7 @@ map.addLayer(osm);
 
 // NIT:
 map.setView(new L.LatLng(23.5499538, 87.2856928),15);
+    map.addlayer(osm);
 }
 
 function getRandomColor() {
